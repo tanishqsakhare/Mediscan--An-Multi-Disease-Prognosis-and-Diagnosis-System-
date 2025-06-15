@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block main %}
+  <div class="help">
+    <div class="help-left">
+        <div class="mainsection">
+            <div class="text">HomePages</div>
+            <div class="section">
+                <img src="{{url_for('static', filename='assest/homepage.png')}}" alt="">
+            </div>
+            <div class="description"><h5>Visit our webapplication to predict your disease.</h5></div>
+
+        </div>
+        <hr>
+        <div class="mainsection">
+            <div class="text">Go to Diagnosis</div>
+            <div class="section">
+                <img src="{{url_for('static', filename='assest/homepage.png')}}" alt="">
+            </div>
+            <div class="description"><h5>Click on Diagonosis to Predict</h5></div>
+        </div>
+        <hr>
+        <div class="mainsection">
+            <div class="text">Select the Disease</div>
+            <div class="section">
+                <img src="{{url_for('static', filename='assest/diagnosis-pages.png')}}" alt="">
+            </div>
+            <div class="description"><h5>Select the Disease which you want to Predict</h5></div>
+        </div>
+        <hr>
+        <div class="text">Enter the Detail and Upload Photo wherever Required</div>
+        <table>
+            <th>To predict Brain, Skin and Lungs go here..</th>
+            <th>To predict Diabetes and Heart Disease go here</th>
+            <tr><td><div class="mainsection">
+            <div class="section">
+                <img class="small" src="{{url_for('static', filename='assest/uploadpage.png')}}" alt="">
+            </div>
+            <div class="text">Upload photo</div>
+        </div></td>
+        <td><div class="mainsection">
+            <div class="section">
+                <img class="small" src="{{url_for('static', filename='assest/uploadpage.png')}}" alt="">
+            </div>
+            <div class="text">Result will be Shown</div>
+        </div></td></tr>
+        </table>
+        
+        
+
+        
+    </div>
+  </div>
+{% endblock %}
