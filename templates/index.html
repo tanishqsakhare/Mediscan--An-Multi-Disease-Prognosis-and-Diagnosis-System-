@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block main %}
+  <section class="container-index">
+    <div class="content-container-index">
+      <div class="main-content">
+
+        <h2>Multidiease Idetification and Prognosis System Using AI</h2>
+        <p>Multidisease Identification and Prognosis System redefine the way we approach healthcare. By harnessing the
+          power of AI, we aim to empower healthcare professionals, improve patient outcomes, and contribute to a
+          healthier and more resilient society. Welcome to the future of healthcare—where precision meets compassion.
+        </p>
+      </div>
+      <div class="image">
+        <img src="{{url_for('static', filename='assest/mediscan-removebg-preview.png')}}" alt="Attractive Image" style="width: 30rem; height: auto;">
+      </div>
+    </div>
+  </section>
+
+  <section class="company-container companies-section">
+    <div class="company-section">
+      <h2 class="obj">What We Do?</h2>
+      <div class="logos ">
+        <a href="#">
+          <h2 style="color:green"> IDENTIFY MULTIPLE DISEASES</h2>
+        </a>
+        <a href="#">
+          <h2 style="color:green;">ENHANCE PATIENT CARE</h2>
+        </a>
+        <a href="#">
+          <h2 style="color:green;">COST SAVING</h2>
+        </a>
+        <a href="#">
+          <h2 style="color:green">EARLY DISEASE DETECTION</h2>
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <script src="{{url_for('static', filename='script.js')}}"></script>
+ {% endblock %}
