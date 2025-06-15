@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block main %}
+
+        <section class="content-container-diagnosis">
+            <h1>Analysis of Model</h1>
+            <div class="container-diagnosis">
+
+
+                <div class="card">
+                    <img src="{{url_for('static',  filename='assest/analysis/lungsgraph.jpg')}}" alt="Card Image">
+                    <div class="card-content">
+                        <div class="card-title">Lungs Disease Graph</div>
+                        <div class="card-description">This graph shows the accuracy of the model during test and train evaluations, revealing overfitting and underfitting of the model.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{url_for('static',  filename='assest/analysis/skingraph.jpg')}}" alt="Card Image">
+                    <div class="card-content">
+                        <div class="card-title">Skin Disease Graph</div>
+                        <div class="card-description">This graph shows the accuracy of the model during test and train evaluations, revealing overfitting and underfitting of the model.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{url_for('static',  filename='assest/analysis/braingraph.jpg')}}" alt="Card Image">
+                    <div class="card-content">
+                        <div class="card-title">Brain Disease Graph</div>
+                        <div class="card-description">This graph shows the accuracy of the model during test and train evaluations, revealing overfitting and underfitting of the model.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{url_for('static',  filename='assest/analysis/diabetesgraph.jpg')}}" alt="Card Image">
+                    <div class="card-content">
+                        <div class="card-title">Diabetes Disease Graph</div>
+                        <div class="card-description">This Graph shows correlation between features. </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{url_for('static',  filename='assest/analysis/heartgraph.jpg')}}" alt="Card Image">
+                    <div class="card-content">
+                        <div class="card-title">Heart Disease Graph</div>
+                        <div class="card-description">This Graph shows correlation between features.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+{% endblock %}
