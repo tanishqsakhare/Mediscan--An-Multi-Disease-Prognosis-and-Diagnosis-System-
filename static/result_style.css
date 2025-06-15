@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 10%;
+}
+.parent{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+.parent .photo-left img{
+    width: 500px;
+    height: 500px;
+}
+.parent .right{
+    display: grid;
+    grid-template-rows: 20% 65%;
+}
+.parent .right .define-right-bottom h3{
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.parent .heading-right{
+    background: red;
+    text-align: center;
+}
+.parent .heading-right h1{
+    color: white;
+    font-size: 50px;
+}
+.parent .right .define-right-bottom p{
+    text-align: justify;
+    font-size: 18px;
+}
+.bottom{
+    display: grid;
+    margin-top: 10px;
+}
+.bottom .heading-bottom h2{
+    font-weight: 900;
+    margin-top: 10px;
+}
+.bottom .heading-bottom p{
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: justify;
+}
+.treatment{
+    margin-top: 10px;
+}
+.treatment p{
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 18px ;
+}
