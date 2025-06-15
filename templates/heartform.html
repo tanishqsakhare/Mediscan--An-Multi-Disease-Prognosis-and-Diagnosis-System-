@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Information Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='heartform.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <form class="health-form" method="post" action="/heart">
+            <h2 class="heading">Heart Information Form</h2>
+            <div class="input-row">
+
+                <div class="input-column">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div>
+                        <label for="stslope">ST Slope:</label>
+                        <select id="stslope" name="stslope" required>
+                            <option value="2">Up</option>
+                            <option value="1">Flat</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ECG">ECG:</label>
+                        <select id="ECG" name="ECG" required>
+                            <option value="1">NORMAL</option>
+                            <option value="2">ST</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="MaxHR">Max Heart Rate:</label>
+                        <input type="number" id="MaxHR" name="MaxHR"  required>
+                    </div>
+                    <div>
+                        <label for="OldPeak">OldPeak:</label>
+                        <input type="number" id="OldPeak" name="OldPeak"  required>
+                    </div>
+                </div>
+
+
+
+
+                <div class="input-column">
+                    <div class="gender">
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                    <div>
+                        <label for="chestpain">Chest Pain Type:</label>
+                        <select id="chestpain" name="chestpain" required>
+                            <option value="1">ATA</option>
+                            <option value="2">NAP</option>
+                            <option value="0">ASY</option>
+                            <option value="3">TA</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ExerciseAngina">ExerciseAngina:</label>
+                        <select id="ExerciseAngina" name="ExerciseAngina" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="BP">BP:</label>
+                        <input type="number" id="BP" name="BP" step="0.1" required>
+                    </div>
+                    <div>
+                        <label for="bloodsugar">Fasting Blood Sugar:</label>
+                        <input type="number" id="bloodsugar" name="bloodsugar" required >
+                    </div>
+                    <div>
+                        <label for="Cholesterol">Cholesterol:</label>
+                        <input type="number" id="Cholesterol" name="Cholesterol" required >
+                    </div>
+                </div>
+
+            </div>
+            <div>
+            <button type="submit">Submit</button>
+            <button type="submit">Cancel</button>
+             </div>
+        </form>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
