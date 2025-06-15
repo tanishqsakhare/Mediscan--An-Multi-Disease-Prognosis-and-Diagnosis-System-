@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='diagnosis.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='help.css')}}">
+  <title>Medical Website</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="{{url_for('static', filename='assest/logo1.jpg')}}" alt="logo image" style="width: 68px; height: auto;"></div>
+    <h1>Medical Website</h1>
+    <div class="burger-icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+   
+  </header>
+
+
+
+  <sidebar class="active">
+    <section class="head">
+      <h2>MediScan App</h2>
+    </section>
+    
+    <ul >
+      <li><a href="/"><i id="icon" class="fa fa-home"></i>Home</a></li>
+      <li><a href="/diganosis"><i id="icon" class="fa fa-stethoscope"></i>Diagnosis</a></li>
+      <!-- <li><a href="/credit"><i id="icon" class="fa fa-star"></i>Credit</a></li> -->
+      <li><a href="/analysis"><i id="icon" class="fa fa-info-circle"></i>Analysis</a></li>
+      <li><a href="/help"><i id="icon" class="fa fa-info-circle"></i>Help</a></li>
+    </ul>
+  </sidebar>
+{% block main %}
+
+{% endblock %}
+</body>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</html>
