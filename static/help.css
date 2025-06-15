@@ -1,0 +1,22 @@
+/*Help section*/
+hr{
+  color: black;
+  left: 0px;
+  width: 900px;
+  margin: 50px 0px 50px 0px;
+}
+.help{
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
+
+.help .help-left .mainsection img{
+  width:  900px;
+  height: 500px;
+}
+.help .help-left .mainsection .small{
+  margin: 50px 25px 50px 25px;
+  width: 400px;
+  height: 250px;
+}
