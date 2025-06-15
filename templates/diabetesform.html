@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Information Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='diabetesform.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <form class="health-form" action="/diabetes" method="post" onsubmit="calculateBMI();">
+            <h2 class="heading">Diabetes Information Form</h2>
+            <div class="input-row">
+
+                <div class="input-column">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div>
+                        <label for="hypertension">Hypertension:</label>
+                        <select id="hypertension" name="hypertension" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="height" step="0.1" required>
+                    </div>
+                    <div>
+                        <label for="hba1c">HbA1c Level:</label>
+                        <input type="number" id="hba1c" name="hba1c" step="0.1" required>
+                    </div>
+                </div>
+
+                <div class="input-column">
+                    <div class="gender">
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                    <div>
+                        <label for="smokingHistory">Smoking History:</label>
+                        <select id="smokingHistory" name="smokingHistory" required>
+                            <option value="4">Never</option>
+                            <option value="0">No Information</option>
+                            <option value="1">Current Smoker</option>
+                            <option value="3">Former Smoker</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="heartDisease">Heart Disease:</label>
+                        <select id="heartDisease" name="heartDisease" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" step="0.1" required>
+                        <div>
+                            <p id="bmiResult"></p>
+                            
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <label for="bloodGlucose">Blood Glucose Level:</label>
+                        <input type="number" id="bloodGlucose" name="bloodGlucose" required>
+                    </div>
+                    <div>
+                        <label for="BMI">BMI:</label>
+                        <input type="number" id="BMI" name="BMI" required>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function calculateBMI() {
+            var weight = parseFloat(document.getElementById('weight').value);
+            var height = parseFloat(document.getElementById('height').value);
+
+            if (weight > 0 && height > 0) {
+                var bmi = weight / ((height / 100) ** 2);
+                displayBMIResult(bmi);
+            } else {
+                alert("Please enter valid values for weight and height.");
+            }
+        }
+
+        function displayBMIResult(bmi) {
+            var bmiResultElement = document.getElementById('BMI');
+            // bmiResultElement.textContent = 'Your BMI is: ' + bmi.toFixed(2);
+            bmiResultElement.value=bmi.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
