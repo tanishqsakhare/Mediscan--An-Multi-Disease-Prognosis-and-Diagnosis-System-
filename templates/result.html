@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='result_style.css')}}">
+    <title>{{data.disease|safe}}</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="photo-left">
+            <img src="{{user_image}}" alt="">
+        </div>
+        <div class="right">
+            <div class="heading-right">
+                <h1 class="Disease-name">{{data.disease|safe}}</h1>
+            </div>
+            <div class="define-right-bottom">
+                <h3>Abstraction:</h3>
+                <p>{{data.abstraction|safe}}</p>
+            </div>
+        </div>
+        
+    </div>
+    <hr>
+    <div class="bottom">
+        <div class="heading-bottom">
+            <h2>Symptoms</h2>
+            <p>{{data.symptoms_define|safe}}
+            </p>
+            {{data.symptoms_list|safe}}
+        </div>
+    </div>
+    <hr>
+    <div class="treatment">
+      <h2>Treatment</h2>
+        <p>{{data.treatment|safe}}</p>
+    </div>  
+</body>
+</html>
+<h3>Clinical experts use a variety of tests to diagnose fungal diseases. The specific tests conducted depend on the suspected fungal infection and the patient's symptoms. Some common fungal disease tests include:</h3><li><strong>Microscopic Examination:</strong><ul><strong>Potassium Hydroxide (KOH) Preparation:</strong>This test involves placing a sample of the affected tissue or fluid in a solution of potassium hydroxide. The solution breaks down cells, leaving fungal elements more visible under a microscope.</ul></li><li>Fungal Culture: A sample of the infected tissue or fluid is cultured on a special medium to encourage the growth of fungi. This helps identify the specific type of fungus causing the infection.</li><li>Antibody Detection: Some fungal infections trigger the production of specific antibodies, which can be detected in the blood. Enzyme-linked immunosorbent assay (ELISA) is a common method for this purpose.</li>
