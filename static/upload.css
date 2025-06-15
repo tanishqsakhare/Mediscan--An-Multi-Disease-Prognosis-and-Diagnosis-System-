@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to bottom,rgba(182, 247, 180, 0.548),#72fa84f8);
+    color:#14213D;
+    text-align: center;
+    padding: 2em;
+}
+
+main {
+    padding: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.btn{
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    font-family: 'poppins', sans-serif;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 1em;
+}
+
+footer {
+    background-color: #14213D;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#preview-image{
+    display:none;
+}
+
+.back-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
